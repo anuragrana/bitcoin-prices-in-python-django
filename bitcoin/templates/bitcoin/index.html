@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Latest Bitcoin Price - ThePythonDjango.Com</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    </head>
+    <body style="margin:20px;">
+
+        <div class="alert alert-dark" role="alert">
+            <span style="font-size:30px;">Bitcoin Latest Price</span> <span style="font-size:15px;">by <a href="http://ThePythonDjango.Com" target="_blank">ThePythonDjango.Com</a></span>
+        </div>
+
+        <div class="list-group">
+            <div class="list-group-item list-group-item-primary">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Name</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>USD Price</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>BTC Price</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Change in Last Hour</label>
+                    </div>
+                </div>
+            </div>
+            {% for coin in crypto_data %}
+            <div class="list-group-item list-group-item-{% if coin.percent_change_1h.0 == '-'%}danger{% else %}success{% endif %}">
+                <div class="row">
+                    <div class="col-md-3">
+                        {{coin.name}}
+                    </div>
+                    <div class="col-md-3">
+                        {{coin.price_usd}}
+                    </div>
+                    <div class="col-md-3">
+                        {{coin.price_btc}}
+                    </div>
+                    <div class="col-md-3">
+                        {{coin.percent_change_1h}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
