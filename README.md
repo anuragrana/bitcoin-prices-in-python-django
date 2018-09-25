@@ -18,9 +18,9 @@ A simple Django project which uses requests package to hit api and get the crypt
 -------------------------
 
 # How was this project developed
-Please refer this article for the steps to develop this project. http://thepythondjango.com/get-latest-bitcoin-crypto-currencies-rates-using-python-django/
+Please refer this article for the steps to develop this project. https://www.pythoncircle.com/post/394/get-latest-bitcoin-and-other-crypto-currencies-rates-using-python-django/
 
 -------------
-# Watch the code in action at - http://anuragrana.in/bitcoin/
+
 
 
